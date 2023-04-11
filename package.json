@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "elm-spa gen && elm-spa build",
+        "build-prod": "elm-spa gen && elm make .elm-spa/defaults/Main.elm --output=public/dist/elm.js",
         "start": "node server/app.js",
         "dev": "concurrently \"npm run watch\"  \"nodemon server/app.js --watch server/app.js\" ",
         "watch": "watch 'elm-spa gen && elm make .elm-spa/defaults/Main.elm --output=public/dist/elm.js --debug' src",
